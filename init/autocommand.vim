@@ -17,6 +17,12 @@ if has("autocmd")
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 
+  " Markdown
+  autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
+
+  " Cucumber
+  autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
+
   " Set filetype to html for EJS files
   au BufNewFile,BufRead *.ejs setfiletype html
 
