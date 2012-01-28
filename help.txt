@@ -1,0 +1,24 @@
+==============================================
+ UNDERSTANDING VIMRC and RELATED CONFIG FILES
+==============================================
+
+Key mapping
+-----------
+
+map is a keyword for 'escape mode' 
+imap is the keyword for 'insert mode'
+vmap is the keyword for 'visual mode'
+cmap is the keyword for 'command-line mode'
+nmap is the keyword for 'normal mode'
+
+[More ressources here => http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1) ]
+
+
+Key bindings
+------------
+
+<Leader> is a key that you can define in your configuration (see in keybindings.vim)
+<S-Tab>, <S-A>, etc. is the key combination of Shift+Tab, Shift+A, etc.
+<C-Tab>, <S-A>, etc. is the key combination of Ctrl+Tab, Ctrl+A, etc.
+
+[More ressources here => http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_2) ]
