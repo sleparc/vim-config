@@ -98,3 +98,8 @@ map <leader>e   :e#<CR>
 map <leader>b   :FufBuffer<CR>
 map <leader>f   <Plug>PeepOpen
 map <leader><C-N> :FufFile **/<CR>
+
+" AckGrep current word
+map <leader>a :call AckGrep()<CR>
+" AckVisual current selection
+vmap <leader>a :call AckVisual()<CR>
