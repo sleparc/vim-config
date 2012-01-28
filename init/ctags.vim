@@ -3,6 +3,5 @@
 "--------------
 
 
-" Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+map <leader>rt  :!ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*
 set tags=./tags;
