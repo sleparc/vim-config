@@ -1,14 +1,3 @@
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
-
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -23,11 +12,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   set hlsearch
 endif
 
-set guifont=Bitstream\ Vera\ Sans\ Mono:h14
-set list listchars=eol:¬,tab:»·,trail:·
-
-" Switch wrap off for everything
-set nowrap
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -72,13 +56,6 @@ else
 
 endif " has("autocmd")
 
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" Always display the status line
-set laststatus=2
 
 " \ is the leader character
 let mapleader = "\\"
@@ -150,22 +127,10 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
 
-" Numbers
-set number
-set numberwidth=5
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
-" Tab completion options
-" (only complete to the longest unambiguous match, and show a menu)
-set completeopt=longest,menu
-set wildmode=list:longest,list:full
-set complete=.,t
-
-" case only matters with mixed case expressions
-set ignorecase
-set smartcase
 
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -174,11 +139,6 @@ set tags=./tags;
 " Reload your vimrc with F2
 map <F2> :source $MYVIMRC<CR>:echoe "Vimrc Reloaded!!!"<CR>
 
-" Set a custom status line to include the current Git branch
-set statusline=%<\ %n:%f\ %y\ %{fugitive#statusline()}\ %m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-
-" GLobally ignore files and directories
-set wildignore+=**/log/**,*.orig,*.swp
 
 " This will allow you to sudo from within vim to save a file that you dont
 " have write permissions on
@@ -197,7 +157,6 @@ nmap <D-/> Vgc<ESC>
 
 " In insert mode o will create a new line below the cursor and put your cursor
 
-set foldmethod=syntax
 
 " in edit mode in that buffer
 imap <C-Return> <Esc>o
