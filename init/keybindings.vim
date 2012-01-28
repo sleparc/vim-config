@@ -93,6 +93,7 @@ nnoremap <Leader>c :set cursorline!<CR>
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+map , :NERDTreeToggle<CR>
 " FuzzyFinder and switchback commands
 map <leader>e   :e#<CR>
 map <leader>b   :FufBuffer<CR>
