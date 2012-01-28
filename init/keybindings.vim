@@ -93,3 +93,8 @@ nnoremap <Leader>c :set cursorline!<CR>
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" FuzzyFinder and switchback commands
+map <leader>e   :e#<CR>
+map <leader>b   :FufBuffer<CR>
+map <leader>f   <Plug>PeepOpen
+map <leader><C-N> :FufFile **/<CR>
