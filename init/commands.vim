@@ -1,3 +1,7 @@
+"--------------
+" Commands
+"--------------
+
 
 " Edit routes
 command! Rroutes :e config/routes.rb

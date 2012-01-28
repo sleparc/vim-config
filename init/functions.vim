@@ -1,3 +1,8 @@
+"--------------
+" Functions
+"--------------
+
+
 " CTRL-H will convert an erb file to Haml
 function! Html2Haml()
   let fileext = expand("%:e")
