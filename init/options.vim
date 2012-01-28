@@ -1,49 +1,53 @@
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+"--------------
+" Options
+"--------------
 
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
-set list listchars=eol:¬,tab:»·,trail:·
 
-" Switch wrap off for everything
-set nowrap
+set list listchars=eol:¬,tab:»·,trail:· " unwanted characters are visible
+set backspace=indent,eol,start          " allow backspacing over everything in insert mode
 
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set autoread                    " No prompt for file changes outside Vim
+set noswapfile                  " No swap file
+set nobackup                    " No backup file
+set nowritebackup
 
-" Always display the status line
-set laststatus=2
+set incsearch                   " Incremental search
+set history=50                  " History size
+set ruler                       " Show the cursor position
+set showcmd                     " Display incomplete commands
 
-" Numbers
-set number
+
+set nowrap                      " No wrapping
+set tabstop=2                   " Tab settings: Softtabs, 2 spaces
+set shiftwidth=2                " Width of autoindent
+set expandtab                   " Use soft tabs
+set ignorecase                  " Ignore case
+set smartcase                   " ... unless uppercase characters are involved
+
+set list                        " Show whitespace
+set listchars=tab:▸\ ,trail:¬   " UTF-8 characters for trailing whitespace
+set virtualedit=onemore         " Cursor can display one character past line
+set showmatch                   " Show matching brackets
+set hidden                      " Allow hidden, unsaved buffers
+set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
+set cursorline                  " Highlight current line
+set number                      " Line numbers
 set numberwidth=5
-
-" Tab completion options
-" (only complete to the longest unambiguous match, and show a menu)
+set laststatus=2                " Always show statusline
+set statusline=%<\ %n:%f\ %y\ %{fugitive#statusline()}\ %m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%) " Set a custom status line to include the current Git branch
 set completeopt=longest,menu
-set wildmode=list:longest,list:full
+set wildmode=list:longest,list:full " Tab completion options (only complete to the longest unambiguous match, and show a menu)
 set complete=.,t
 
-" case only matters with mixed case expressions
-set ignorecase
+set ignorecase                  " case only matters with mixed case expressions
 set smartcase
 
-" Set a custom status line to include the current Git branch
-set statusline=%<\ %n:%f\ %y\ %{fugitive#statusline()}\ %m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set wildignore+=**/log/**,*.orig,*.swp " GLobally ignore files and directories
 
-" GLobally ignore files and directories
-set wildignore+=**/log/**,*.orig,*.swp
+set foldmethod=syntax           " Folds methods, contexts and classes by default
 
-set foldmethod=syntax
+set hlsearch                    " Switch on highlighting the last used search pattern
 
-set hlsearch "switch on highlighting the last used search pattern
-
-set autoread
+set visualbell                  " Suppress audio/visual error bell
+set notimeout                   " No command timeout
