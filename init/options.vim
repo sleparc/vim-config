@@ -46,3 +46,4 @@ set foldmethod=syntax
 
 set hlsearch "switch on highlighting the last used search pattern
 
+set autoread
