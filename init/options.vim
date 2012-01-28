@@ -44,3 +44,5 @@ set wildignore+=**/log/**,*.orig,*.swp
 
 set foldmethod=syntax
 
+set hlsearch "switch on highlighting the last used search pattern
+
