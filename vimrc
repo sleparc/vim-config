@@ -243,3 +243,4 @@ map <silent> <C-H> :call Html2Haml()<CR>
 map <silent> <C-Q> :noh<CR>
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+set autoread
