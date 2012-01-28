@@ -418,3 +418,35 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+snippet bef
+	before(${1}) do
+		${2}
+	end
+snippet its
+	it "should ${1:do something}" do
+		${2}
+	end
+snippet desc
+	describe "${1}" do
+		${2}
+	end
+snippet con
+	context "${1}" do
+		${2}
+	end
+snippet shd
+	should "${1:do_something}" do
+		${2}
+	end
+snippet sh
+	should ${1}
+snippet shbt
+	should belong_to(${1})
+snippet shhm
+	should have_many(${1})
+snippet shvp
+	should validate_presence_of(${1})
+snippet set
+	setup do
+		${1}
+	end
