@@ -93,6 +93,10 @@ nnoremap <Leader>c :set cursorline!<CR>
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" Auto-indent whole file
+nmap <leader>=  gg=G``
+map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
+
 map , :NERDTreeToggle<CR>
 " FuzzyFinder and switchback commands
 map <leader>e   :e#<CR>
