@@ -15,7 +15,7 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
 " Color scheme
-colorscheme sunburst
+colorscheme railscasts3
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
