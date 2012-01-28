@@ -11,23 +11,13 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
-  " Set File type to 'text' for files ending in .txt
-  autocmd BufNewFile,BufRead *.txt setfiletype text
+  autocmd FileType text,markdown,html,xhtml,eruby  setlocal wrap linebreak nolist " Enable soft-wrapping for text files
 
-  " Enable soft-wrapping for text files
-  autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
-
-  " Markdown
-  autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
-
-  " Cucumber
-  autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
-
-  " Set filetype to html for EJS files
-  au BufNewFile,BufRead *.ejs setfiletype html
-
-  " For Haml
-  au! BufRead,BufNewFile *.haml         setfiletype haml
+  autocmd BufNewFile,BufRead *.txt                 setfiletype text " txt files
+  autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} setfiletype markdown " Markdown
+  autocmd BufNewFile,BufReadPost *.feature,*.story setfiletype cucumber " Cucumber
+  autocmd BufNewFile,BufRead *.ejs                 setfiletype html
+  autocmd! BufRead,BufNewFile *.haml               setfiletype haml
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
