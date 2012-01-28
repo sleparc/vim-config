@@ -204,6 +204,9 @@ vmap <D-/> gc
 nmap <D-/> Vgc<ESC>
 
 " In insert mode o will create a new line below the cursor and put your cursor
+
+set foldmethod=syntax
+
 " in edit mode in that buffer
 imap <C-Return> <Esc>o
 
