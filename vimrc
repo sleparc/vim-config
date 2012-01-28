@@ -15,3 +15,10 @@ filetype plugin indent on
 " Source initialization files
 " ---------------------------
 runtime! init/**.vim
+
+" Machine-local vim settings
+" --------------------------
+if filereadable(".vimrc.local")
+  source .vimrc.local
+endif
+

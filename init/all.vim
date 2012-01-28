@@ -9,11 +9,6 @@ command! Rroutes :e config/routes.rb
 command! Rschema :e db/schema.rb
 
 
-" Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
-
 " Use Ack instead of Grep when available
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
