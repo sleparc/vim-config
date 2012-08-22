@@ -426,6 +426,10 @@ snippet its
 	it "should ${1:do something}" do
 		${2}
 	end
+snippet it
+	it "should ${1:do something}" do
+		${2}
+	end
 snippet desc
 	describe "${1}" do
 		${2}
@@ -433,6 +437,12 @@ snippet desc
 snippet con
 	context "${1}" do
 		${2}
+	end
+snippet cont
+	context "${1}" do
+		should "${2:do_something}" do
+			${3}
+		end
 	end
 snippet shd
 	should "${1:do_something}" do
