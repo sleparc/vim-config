@@ -4,23 +4,28 @@
 
 let mapleader = "\\"
 
+nmap <leader>t  :CommandT<CR>
+map <leader>t  :CommandT<CR>
+" unmap <Leader>te
 
 " Leader shortcuts for Rails commands
-" map <Leader>m :Rmodel 
-" map <Leader>c :Rcontroller 
-" map <Leader>v :Rview 
-" map <Leader>u :Runittest 
-" map <Leader>f :Rfunctionaltest 
-" map <Leader>tm :RTmodel 
-" map <Leader>tc :RTcontroller 
-" map <Leader>tv :RTview 
-" map <Leader>tu :RTunittest 
-" map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
+map <Leader>m  :Rmodel <CR>
+map <Leader>c  :Rcontroller <CR>
+map <Leader>v  :Rview <CR>
+map <Leader>u  :Runittest <CR>
+map <Leader>f  :Rfunctionaltest <CR>
+
+" map <Leader>tm :RTmodel <CR>
+" map <Leader>tc :RTcontroller <CR>
+" map <Leader>tv :RTview <CR>
+" map <Leader>tu :RTunittest <CR>
+" map <Leader>tf :RTfunctionaltest <CR>
+
+map <Leader>sm :RSmodel <CR>
+map <Leader>sc :RScontroller <CR>
+map <Leader>sv :RSview <CR>
+map <Leader>su :RSunittest <CR>
+map <Leader>sf :RSfunctionaltest <CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -28,10 +33,6 @@ map <Leader>h :set invhls <CR>
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -71,15 +72,14 @@ map <C-F> :Ack<Space>
 vmap <D-/> gc
 nmap <D-/> Vgc<ESC>
 
-
 " in edit mode in that buffer
 imap <C-Return> <Esc>o
 
 " CTRL-O will create a new line below your cursor and not be in insert mode
-map <C-O> o<Esc>
+" map <C-O> o<Esc>
 
 " CTRL-A will create a new line above your cursor and not be in insert mode
-map <C-A> O<Esc>
+" map <C-A> O<Esc>
 
 
 map <silent> <C-H> :call Html2Haml()<CR>
@@ -98,6 +98,7 @@ nmap <leader>=  gg=G``
 map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
 
 map , :NERDTreeToggle<CR>
+
 " FuzzyFinder and switchback commands
 map <leader>e   :e#<CR>
 map <leader>b   :FufBuffer<CR>
@@ -108,3 +109,4 @@ map <leader><C-N> :FufFile **/<CR>
 map <leader>a :call AckGrep()<CR>
 " AckVisual current selection
 vmap <leader>a :call AckVisual()<CR>
+
