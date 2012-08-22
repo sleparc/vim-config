@@ -36,6 +36,12 @@ if has("autocmd")
 
   augroup END
 
+  augroup vimrc_autocmds
+    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+    autocmd BufEnter *.rb match OverLength /\%80v.*/
+    autocmd BufEnter *.js match OverLength /\%100v.*/
+  augroup END
+
 else
 
   set autoindent		" always set autoindenting on
