@@ -3,4 +3,5 @@
 "--------------
 
 
-colorscheme railscasts3
+" colorscheme railscasts3
+colorscheme candycode
