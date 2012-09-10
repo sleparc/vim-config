@@ -18,8 +18,11 @@ snippet bef
 snippet des
 	describe("${1:description}", function() {
 		${2}
-	});${3}	
-
+	});
+snippet desc
+	describe("${1:description}", function() {
+		${2}
+	});
 # Expect not to be defined
 snippet notd
 	expect(${1:target}).not.toBeDefined();${2}
