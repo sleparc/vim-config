@@ -1,7 +1,42 @@
 " Tabular:     Align columnar data using regex-designated column boundaries
-" Maintainer:  Matthew Wozniski (mjw@drexel.edu)
-" Date:        Thu, 11 Oct 2007 00:35:34 -0400
-" Version:     0.1
+" Maintainer:  Matthew Wozniski (godlygeek@gmail.com)
+" Date:        Thu, 03 May 2012 20:49:32 -0400
+" Version:     1.0
+"
+" Long Description:
+" Sometimes, it's useful to line up text.  Naturally, it's nicer to have the
+" computer do this for you, since aligning things by hand quickly becomes
+" unpleasant.  While there are other plugins for aligning text, the ones I've
+" tried are either impossibly difficult to understand and use, or too simplistic
+" to handle complicated tasks.  This plugin aims to make the easy things easy
+" and the hard things possible, without providing an unnecessarily obtuse
+" interface.  It's still a work in progress, and criticisms are welcome.
+"
+" License:
+" Copyright (c) 2012, Matthew J. Wozniski
+" All rights reserved.
+"
+" Redistribution and use in source and binary forms, with or without
+" modification, are permitted provided that the following conditions are met:
+"     * Redistributions of source code must retain the above copyright notice,
+"       this list of conditions and the following disclaimer.
+"     * Redistributions in binary form must reproduce the above copyright
+"       notice, this list of conditions and the following disclaimer in the
+"       documentation and/or other materials provided with the distribution.
+"     * The names of the contributors may not be used to endorse or promote
+"       products derived from this software without specific prior written
+"       permission.
+"
+" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ``AS IS'' AND ANY EXPRESS
+" OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+" OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
+" NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT,
+" INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+" LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+" OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+" LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+" NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+" EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 " Abort if running in vi-compatible mode or the user doesn't want us.
 if &cp || exists('g:tabular_loaded')
@@ -235,14 +270,27 @@ endfunction
 "
 " Align text, either using the given pattern, or the command associated with
 " the given name.
-com! -nargs=+ -range -complete=customlist,<SID>CompleteTabularizeCommand
+com! -nargs=* -range -complete=customlist,<SID>CompleteTabularizeCommand
    \ Tabularize <line1>,<line2>call Tabularize(<q-args>)
 
 function! Tabularize(command) range
+  if empty(a:command)
+    if !exists("s:last_tabularize_command")
+      echohl ErrorMsg
+      echomsg "Tabularize hasn't been called yet; no pattern/command to reuse!"
+      echohl None
+      return
+    endif
+  else
+    let s:last_tabularize_command = a:command
+  endif
+
+  let command = s:last_tabularize_command
+
   let range = a:firstline . ',' . a:lastline
 
   try
-    let [ pattern, format ] = s:ParsePattern(a:command)
+    let [ pattern, format ] = s:ParsePattern(command)
 
     if !empty(pattern)
       let cmd  = "tabular#TabularizeStrings(a:lines, " . string(pattern)
@@ -255,12 +303,12 @@ function! Tabularize(command) range
 
       exe range . 'call tabular#PipeRange(pattern, cmd)'
     else
-      if exists('b:TabularCommands') && has_key(b:TabularCommands, a:command)
-        let command = b:TabularCommands[a:command]
-      elseif has_key(s:TabularCommands, a:command)
-        let command = s:TabularCommands[a:command]
+      if exists('b:TabularCommands') && has_key(b:TabularCommands, command)
+        let command = b:TabularCommands[command]
+      elseif has_key(s:TabularCommands, command)
+        let command = s:TabularCommands[command]
       else
-        throw "Unrecognized command " . string(a:command)
+        throw "Unrecognized command " . string(command)
       endif
 
       exe range . command
