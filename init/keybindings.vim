@@ -90,9 +90,6 @@ map <silent> <C-Q> :noh<CR>
 
 nnoremap <Leader>c :set cursorline!<CR>
 
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-
 " Auto-indent whole file
 nmap <leader>=  gg=G``
 map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
