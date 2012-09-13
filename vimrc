@@ -7,6 +7,7 @@
 "   - Pivotal Labs' vimrc => https://github.com/pivotal/vim-config/blob/master/vimrc
 "
 
+call pathogen#infect()
 set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
 filetype plugin indent on
