@@ -2,6 +2,5 @@
 " Color Scheme
 "--------------
 
-
-" colorscheme railscasts3
-colorscheme candycode
+set guifont=Inconsolata:h16
+colorscheme Tomorrow-Night-Bright

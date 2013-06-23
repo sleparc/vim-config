@@ -2,6 +2,7 @@
 " Maintainer:   Justin Constantino <goflyapig-at-gmail-com>
 " Last Change:  2006 Aug 12
 
+set guifont=Inconsolata:h16
 set background=dark
 highlight clear
 let g:colors_name="candycode"
