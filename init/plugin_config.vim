@@ -72,6 +72,8 @@ if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+let g:neocomplcache_enable_at_startup = 1
 " -------------------------------------------------------------------
 
 
