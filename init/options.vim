@@ -32,7 +32,7 @@ set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
 set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
 set cursorline                  " Highlight current line
-set number                      " Line numbers
+set relativenumber
 set numberwidth=5
 set laststatus=2                " Always show statusline
 set statusline=%<\ %n:%f\ %y\ %{fugitive#statusline()}\ %m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%) " Set a custom status line to include the current Git branch
