@@ -4,8 +4,6 @@
 
 let mapleader = "\\"
 
-nmap <leader>t  :CommandT<CR>
-map <leader>t  :CommandT<CR>
 " unmap <Leader>te
 
 " Leader shortcuts for Rails commands

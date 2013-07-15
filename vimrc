@@ -10,8 +10,10 @@
 call pathogen#infect()
 set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 filetype plugin indent on
-
 
 " Source initialization files
 " ---------------------------

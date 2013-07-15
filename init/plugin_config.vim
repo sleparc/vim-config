@@ -78,7 +78,10 @@ let g:neocomplcache_enable_at_startup = 1
 
 
 " -------------------------------------------------------------------
-" CommandT
+" CtrlP
 " -------------------------------------------------------------------
-let g:CommandTMaxHeight=20
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'vendor/\(gems\|cache\|bin\|bundler\|doc\|specifications\)'
+map <Leader>b :CtrlPBuffer<CR>
 " -------------------------------------------------------------------
