@@ -10,8 +10,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/nerdtree'
 Bundle 'shougo/neocomplcache'
 Bundle 'sjl/gundo.vim'
-" Bundle 'skwp/vim-powerline'
-Bundle 'Lokaltog/powerline'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
@@ -22,6 +20,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'airblade/vim-gitgutter'
 
+Bundle 'bling/vim-airline'
 
 " Snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
