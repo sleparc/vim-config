@@ -63,3 +63,7 @@ vmap <leader>a :call AckVisual()<CR>
 
 
 map <leader>cf :let @* = expand("%")<CR>
+
+
+map <Leader>] :TagbarClose <CR> :TagbarOpen <CR>
+map <Leader>[ :TagbarTogglePause <CR>
