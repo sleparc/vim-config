@@ -18,12 +18,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
-Bundle 'airblade/vim-gitgutter'
-
-Bundle 'bling/vim-airline'
 
 " Snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
+Bundle 'tclem/vim-arduino'
+
+Bundle 'kchmck/vim-coffee-script'

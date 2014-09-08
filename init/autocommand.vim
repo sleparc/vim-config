@@ -18,6 +18,7 @@ if has("autocmd")
   autocmd BufNewFile,BufReadPost *.feature,*.story setfiletype cucumber " Cucumber
   autocmd BufNewFile,BufRead *.ejs                 setfiletype html
   autocmd! BufRead,BufNewFile *.haml               setfiletype haml
+  autocmd BufNewFile,BufRead *.coffee              setfiletype coffee
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx

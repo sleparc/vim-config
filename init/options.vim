@@ -53,3 +53,5 @@ set hlsearch                    " Switch on highlighting the last used search pa
 
 set visualbell                  " Suppress audio/visual error bell
 set notimeout                   " No command timeout
+
+" set clipboard=unnamed           " use system clipboard for yanks
