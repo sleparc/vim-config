@@ -37,4 +37,6 @@ Plugin 'wakatime/vim-wakatime'
 " comes as replacement of 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 
+Plugin 'scrooloose/syntastic'
+
 call vundle#end()

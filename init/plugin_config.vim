@@ -92,3 +92,14 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'vendor/\(gems\|cache\|bin\|bundler\|doc\|specifications\)'
 map <Leader>b :CtrlPBuffer<CR>
 " -------------------------------------------------------------------
+"
+"
+" -------------------------------------------------------------------
+" Syntastic
+" -------------------------------------------------------------------
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html', 'java'] }
+" -------------------------------------------------------------------
