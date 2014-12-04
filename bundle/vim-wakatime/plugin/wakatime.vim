@@ -6,7 +6,7 @@
 " Website:     https://wakatime.com/
 " ============================================================================
 
-let s:VERSION = '2.0.8'
+let s:VERSION = '2.0.13'
 
 
 " Init {{{
@@ -43,7 +43,7 @@ let s:VERSION = '2.0.8'
     if !filereadable(expand("$HOME/.wakatime.cfg"))
         let key = input("[WakaTime] Enter your wakatime.com api key: ")
         if key != ''
-            call writefile(['[settings]', printf("api_key=%s", key)], expand("$HOME/.wakatime.cfg"))
+            call writefile(['[settings]', printf("api_key = %s", key), 'ignore =', '    ^COMMIT_EDITMSG$', '    ^TAG_EDITMSG$'], expand("$HOME/.wakatime.cfg"))
             echo "[WakaTime] Setup complete! Visit http://wakatime.com to view your logged time."
         endif
     endif

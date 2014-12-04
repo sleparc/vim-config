@@ -3,6 +3,43 @@ History
 -------
 
 
+2.1.7 (2014-11-30)
+++++++++++++++++++
+
+- upgrade pygments to v2.0.1
+- always log an error when api key is incorrect
+
+
+2.1.6 (2014-11-18)
+++++++++++++++++++
+
+- fix list index error when detecting subversion project
+
+
+2.1.5 (2014-11-17)
+++++++++++++++++++
+
+- catch exceptions when getting current machine time zone
+
+
+2.1.4 (2014-11-12)
+++++++++++++++++++
+
+- when Python was not compiled with https support, log an error to the log file
+
+
+2.1.3 (2014-11-10)
+++++++++++++++++++
+
+- correctly detect branch name for subversion projects
+
+
+2.1.2 (2014-10-07)
+++++++++++++++++++
+
+- still log heartbeat when something goes wrong while reading num lines in file
+
+
 2.1.1 (2014-09-30)
 ++++++++++++++++++
 

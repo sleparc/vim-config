@@ -3,6 +3,42 @@ History
 -------
 
 
+2.0.13 (2014-11-30)
++++++++++++++++++++
+
+- upgrade external wakatime package to v2.1.7
+- upgrade pygments to v2.0.1
+- always log an error when api key is incorrect
+
+
+2.0.12 (2014-11-18)
++++++++++++++++++++
+
+- upgrade external wakatime package to v2.1.6
+- fix list index error when detecting subversion project
+
+
+2.0.11 (2014-11-12)
++++++++++++++++++++
+
+- upgrade external wakatime package to v2.1.4
+- when Python was not compiled with https support, log an error to the log file
+
+
+2.0.10 (2014-11-10)
++++++++++++++++++++
+
+- upgrade external wakatime package to v2.1.3
+- correctly detect branch for subversion projects
+
+
+2.0.9 (2014-11-03)
+++++++++++++++++++
+
+- upgrade external wakatime package to v2.1.2
+- catch UnicodeDecodeErrors to prevent error messages propegating into Vim
+
+
 2.0.8 (2014-09-30)
 ++++++++++++++++++
 
