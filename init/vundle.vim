@@ -8,7 +8,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/greplace.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'vim-scripts/guicolorscheme.vim'
-Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
@@ -33,5 +32,9 @@ Plugin 'tclem/vim-arduino'
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'wakatime/vim-wakatime'
+
+" Status/Tabline
+" comes as replacement of 'majutsushi/tagbar'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
