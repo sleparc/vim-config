@@ -56,6 +56,9 @@ map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
 " NERDTree
 map , :NERDTreeToggle<CR>
 
+" TagBar
+map ! :TagbarToggle<CR>
+
 " AckGrep current word
 map <leader>a :call AckGrep()<CR>
 " AckVisual current selection
