@@ -31,8 +31,6 @@ Plugin 'tclem/vim-arduino'
 
 Plugin 'kchmck/vim-coffee-script'
 
-Plugin 'wakatime/vim-wakatime'
-
 " Status/Tabline
 " comes as replacement of 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
