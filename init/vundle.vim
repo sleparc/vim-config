@@ -34,6 +34,7 @@ Plugin 'kchmck/vim-coffee-script'
 " Status/Tabline
 " comes as replacement of 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
 
 Plugin 'scrooloose/syntastic'
 
