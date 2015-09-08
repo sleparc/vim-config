@@ -15,7 +15,7 @@ if exists("b:did_indent")
 endif
 let b:did_indent = 1
 
-setlocal nosmartindent
+" setlocal nosmartindent
 
 " Now, set up our indentation expression and keys that trigger it.
 setlocal indentexpr=GetJavascriptIndent()

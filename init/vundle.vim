@@ -37,5 +37,6 @@ Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 
 Plugin 'scrooloose/syntastic'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()

@@ -2,6 +2,8 @@
 " AutoCommand
 "------------
 
+  filetype plugin indent on
+  "autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -19,6 +21,10 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.ejs                 setfiletype html
   autocmd! BufRead,BufNewFile *.haml               setfiletype haml
   autocmd BufNewFile,BufRead *.coffee              setfiletype coffee
+  autocmd BufNewFile,BufRead *.jsx                 setfiletype javascript
+  autocmd BufNewFile,BufRead *.js                  setfiletype javascript
+
+  "autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -44,8 +50,6 @@ if has("autocmd")
   augroup END
 
 else
-
-  set autoindent		" always set autoindenting on
-
+  set autoindent  " always set autoindenting on
 endif " has("autocmd")
 
