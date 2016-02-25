@@ -2,41 +2,49 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'corntrace/bufexplorer'
-Plugin 'wincent/Command-T'
-Plugin 'godlygeek/tabular'
-Plugin 'vim-scripts/greplace.vim'
-Plugin 'vim-scripts/IndexedSearch'
+" Basic vim
+Plugin 'scrooloose/nerdtree'          " Browse file tree
+Plugin 'kien/ctrlp.vim'               " Fuzzyfind a file
+Plugin 'corntrace/bufexplorer'        " Lists open buffers
+Plugin 'rking/ag.vim'                 " Very fast search
+Plugin 'godlygeek/tabular'            " Align text on specified character
+Plugin 'shougo/neocomplcache'         " Word completion
+Plugin 'tomtom/tcomment_vim'          " Comment a line/paragraph
+Plugin 'tpope/vim-fugitive'           " Git commands in vim
+Plugin 'tpope/vim-surround'           " Change surrounding characters
+Plugin 'bling/vim-airline'            " Tagbar at bottom of window that displays file, status, etc.
 Plugin 'vim-scripts/guicolorscheme.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/nerdtree'
-Plugin 'shougo/neocomplcache'
-Plugin 'sjl/gundo.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
 
-" Snipmate dependencies
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
+" Advanced vim
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'sjl/gundo.vim'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'vim-scripts/greplace.vim'
+
+" Language specific
+Plugin 'tpope/vim-rails'              " Rails file navigation, etc.
+Plugin 'tpope/vim-endwise'
 Plugin 'tclem/vim-arduino'
 
-Plugin 'kchmck/vim-coffee-script'
+" Snipmate dependencies
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'honza/vim-snippets'
+Plugin 'mmozuras/snipmate-mocha'
 
-" Status/Tabline
-" comes as replacement of 'majutsushi/tagbar'
-Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
 
 Plugin 'scrooloose/syntastic'
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
+Plugin 'monokrome/vim-testdrive'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'othree/yajs.vim'
+Plugin 'isRuslan/vim-es6'
+
+" Dependencies
+Plugin 'tomtom/tlib_vim'
+
+
+" Should probably be deleted
+Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()
