@@ -36,16 +36,6 @@ let g:neocomplcache_enable_at_startup = 0
 
 
 " -------------------------------------------------------------------
-" skwp-vim-powerline
-" -------------------------------------------------------------------
-" let g:Powerline_symbols='fancy'
-let g:Powerline_theme='skwp'
-let g:Powerline_stl_path_style='short'
-let g:Powerline_colorscheme='skwp'
-" -------------------------------------------------------------------
-
-
-" -------------------------------------------------------------------
 " NeoCompCache
 " -------------------------------------------------------------------
 " default # of completions is 100, that's crazy
