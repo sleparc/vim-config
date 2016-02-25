@@ -15,3 +15,5 @@ command! W w !sudo tee % > /dev/null
 command! Respace %s/\(\s\+\)\(\n\)/\2/
 
 command! FilenameInBuffer :let @* = expand("%")
+
+command! PrettyJson :%!python -m json.tool
