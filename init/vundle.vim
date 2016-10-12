@@ -15,30 +15,31 @@ Plugin 'tpope/vim-surround'           " Change surrounding characters
 Plugin 'bling/vim-airline'            " Tagbar at bottom of window that displays file, status, etc.
 Plugin 'vim-scripts/guicolorscheme.vim'
 
+
 " Advanced vim
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'vim-scripts/greplace.vim'
 
+
 " Language specific
-Plugin 'tpope/vim-rails'              " Rails file navigation, etc.
+Plugin 'tpope/vim-rails'                 " Rails file navigation, etc.
 Plugin 'tpope/vim-endwise'
-Plugin 'tclem/vim-arduino'
+
 
 " Snipmate dependencies
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'             " support for textual snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'    " SnipMate depends on vim-addon-mw-utils
+Plugin 'honza/vim-snippets'              " snippets for snipMate
 Plugin 'mmozuras/snipmate-mocha'
 
 
-Plugin 'scrooloose/syntastic'
-" Plugin 'mxw/vim-jsx'
-Plugin 'monokrome/vim-testdrive'
-" Plugin 'jelera/vim-javascript-syntax'
-" Plugin 'othree/yajs.vim'
-Plugin 'isRuslan/vim-es6'
+Plugin 'scrooloose/syntastic'            " syntax checking plugin
+Plugin 'pangloss/vim-javascript'         " Javascript indentation and syntax support
+Plugin 'mxw/vim-jsx'                     " Syntax highlighting and indenting for JSX
+Plugin 'isRuslan/vim-es6'                " List of JavaScript ES6 snippets and syntax highlighting for vim
+" Plugin 'monokrome/vim-testdrive'
 
 " Dependencies
 Plugin 'tomtom/tlib_vim'
